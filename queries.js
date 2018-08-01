@@ -9,7 +9,7 @@ module.exports = {
     },
     create(game){
       return database('game')
-        .create(game)
+        .insert(game)
         .returning('*')
         .then(record => record[0])
     },
